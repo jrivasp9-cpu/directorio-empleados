@@ -1,75 +1,56 @@
-# React + TypeScript + Vite
+# Directorio de empleados
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web para consultar el directorio de empleados de una empresa. Permite iniciar sesión, ver el listado paginado, buscar por nombre, abrir la ficha de un empleado, descargar su fotografía y su ficha, dar de alta a un empleado con fotografía y darlo de baja. Los datos provienen de la API pública DummyJSON, que simula las altas y las bajas sin guardarlas.
 
-Currently, two official plugins are available:
+Proyecto de recuperación del curso Desarrollo Web (036), Universidad Mariano Gálvez, Centro Universitario de Chiquimulilla.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Sitio desplegado: PENDIENTE
 
-## React Compiler
+## Instalación y ejecución
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone https://github.com/jrivasp9-cpu/directorio-empleados.git
+cd directorio-empleados
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+La dirección de la API se lee de VITE_API_URL. Si no existe, usa https://dummyjson.com. Hay un archivo .env.example como modelo.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Cuenta de prueba de la API: usuario emilys, contraseña emilyspass.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Scripts
 
-```
+npm run dev inicia el servidor de desarrollo.
+npm run build genera la versión de producción.
+npm run lint revisa el código con ESLint.
+
+## Tecnologías
+
+React 19, TypeScript, Vite, Tailwind CSS, shadcn/ui, React Router, Zustand, TanStack Query, Axios, React Hook Form, Zod y react-hot-toast.
+
+## Capturas
+
+Inicio de sesión con credenciales incorrectas
+
+![Inicio de sesión con error](capturas/01-login-error.png)
+
+Directorio con la paginación
+
+![Directorio](capturas/02-directorio.png)
+
+Búsqueda con resultados
+
+![Búsqueda](capturas/03-busqueda.png)
+
+Detalle de un empleado
+
+![Detalle](capturas/04-detalle.png)
+
+Formulario con un error de validación
+
+![Formulario](capturas/05-formulario-error.png)
+
+Tarjeta de error con el botón Reintentar
+
+![Error de conexión](capturas/06-error-conexion.png)
