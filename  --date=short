@@ -1,0 +1,7 @@
+2026-11-19 feat: detalle del empleado con descarga de imagen y ficha
+2026-11-19 feat: listado con paginación del servidor, búsqueda en la URL y eliminación
+2026-11-19 feat: servicios y hooks de TanStack Query para empleados
+2026-11-18 feat: login con validación, ProtectedRoute y página 404
+2026-11-18 feat: cliente Axios con interceptores y renovación automática del token
+2026-11-18 feat: tipos, mensajes de error, esquemas Zod y store de sesión con persist
+2026-11-18 chore: proyecto base con Vite, Tailwind y shadcn/ui

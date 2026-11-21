@@ -12,6 +12,7 @@ import { useEmpleados } from '@/hooks/useEmpleados';
 import type { Empleado } from '@/types';
 import { getErrorMessage } from '@/utils/getErrorMessage';
 import { leerPagina, totalPaginas } from '@/utils/paginacion';
+import NuevoEmpleado from '@/components/NuevoEmpleado';
 
 export default function EmpleadosPage() {
   const [parametros, setParametros] = useSearchParams();
@@ -137,6 +138,7 @@ export default function EmpleadosPage() {
             </div>
             <Button type="submit">Buscar</Button>
           </form>
+          <NuevoEmpleado />
         </div>
         {contenido}
       </main>
