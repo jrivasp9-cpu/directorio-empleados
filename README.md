@@ -4,7 +4,7 @@ Aplicación web para consultar el directorio de empleados de una empresa. Permit
 
 Proyecto de recuperación del curso Desarrollo Web (036), Universidad Mariano Gálvez, Centro Universitario de Chiquimulilla.
 
-Sitio desplegado: PENDIENTE
+Sitio desplegado: https://directorio-empleados-two.vercel.app
 
 ## Instalación y ejecución
 
